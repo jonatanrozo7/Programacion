@@ -2,22 +2,19 @@ class Atleta {
 	String nombre;
 	int edad;
 	int energia;
+	Tenis tenis;
 
-	// 3 objetos de la clase Tenis dentro de Atleta
-	Tenis tenis1 = new Tenis("Nike", "Pegasus", "Montaña");
-	Tenis tenis2 = new Tenis("Adidas", "Ultraboost", "Asfalto");
-	Tenis tenis3 = new Tenis("Puma", "Velocity Nitro", "Playa");
-
-	public Atleta(String nombre, int edad, int energia) {
+	public Atleta(String nombre, int edad, int energia, Tenis tenis) {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.energia = energia;
+		this.tenis = tenis;
 	}
 
 	public void mostrarSoloTenis() {
 	System.out.println("\nAtleta: " + nombre);
 		System.out.println("Tenis del atleta:");
-		System.out.println(tenis1.getDescripcion());
+		System.out.println(tenis.getDescripcion());
 	}
 
 	public int getEnergia() {
